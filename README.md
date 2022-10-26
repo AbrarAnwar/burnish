@@ -27,6 +27,9 @@ If you expect your arguments to be directly followed one after another (e.g. `--
 
 ```burnish run --python_file train.py```, where the specified python file is called with all the argument keys and values in order.
 
+You can also set `--num_workers #` so that multiple jobs can run in parallel. It will keep running until all the jobs in the list are complete. If you have a cluster with shared storage, or can only fit a certain number of jobs in a GPU, you can set the number of workers accordingly to each GPU. You can call `burnish run` multiple times if necessary. 
+
+
 Note, the outputs of each job is put into the folder `burnish_log` labeled by time and job ID. Currently, there is no saving of the std_err output, and if there is anything in std_err, the output upon completion is ERROR. This is not ideal, especially since we cannot store error logs. THIS IS CURRENTLY A WORK IN PROGRESS. I highly recommend testing your code extensively before running it through this script, as it becomes hard to find where jobs have failed.
 
 Additionally, since this code is still a work in progress, sometimes perfectly running code states ERROR. I am currently looking for better solutions. 
