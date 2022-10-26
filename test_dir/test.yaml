@@ -1,0 +1,4 @@
+--env: ['env1', 'env2', 'env3', 'env4']
+--model: ['model1', 'model2']
+--seed: ['1', '2']
+--lr: ['.001']

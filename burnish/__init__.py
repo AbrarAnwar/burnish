@@ -204,7 +204,6 @@ def cli():
 
     if args.action == 'create':
         create(args)
-        print('create done')
     
     if args.action == 'run':
         if not os.path.exists(args.log_dir):
